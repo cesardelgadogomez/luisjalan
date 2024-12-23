@@ -53,7 +53,6 @@ li {
 
 .menu {
   height: 100%;
-/*   margin-top: 2rem; */
   gap: 2rem;
 }
 
@@ -154,7 +153,7 @@ li {
 /****** MAIN ******/
 /******************/
 
-.primera-seccion {
+.primera-seccion-pc {
   width: 100%;
   height: 100dvh;
   height: 100vh;
@@ -181,6 +180,10 @@ li {
 
 .ps-parte3 img {
   width: 50%;
+}
+
+.primera-seccion-mobile {
+  display: none;
 }
 
 .segunda-seccion {
@@ -337,6 +340,13 @@ li {
   font-size: 3rem;
 }
 
+.video1 iframe,
+.video2 iframe,
+.video3 iframe {
+  width: 560px;
+  height: 315px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -393,4 +403,176 @@ li {
 .menu-redes i:hover {
   background-color: rgb(247, 196, 86);
   color: white;
+}
+
+@media screen and (max-width:450px) {
+
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .lj-logo-menu h3 {
+    font-family: var(--titulos);
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: rgb(247, 196, 86);
+    margin-bottom: 3rem;
+  }
+  
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-nav li {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .video-pc {
+    display: none;
+  }
+  
+  .video-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .primera-seccion-pc {
+    display: none;
+  }
+  
+  .ps-parte1,
+  .ps-parte3 {
+    display: none;
+  }
+
+  .primera-seccion-mobile {
+    width: 100%;
+    height: 680px;
+    background-image: url("../img/fondo-virgen-mobile.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+  
+  .ps-parte1-mobile,
+  .ps-parte3-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ps-parte1-mobile img {
+    width: 80%;
+    margin: 1.5rem 0;
+  }
+  
+  .ps-parte3-mobile img {
+    width: 80%;
+  }
+
+  .segunda-seccion {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .parte1,
+  .parte2 {
+    width: 100%;
+  }
+
+  .parte2 h2 {
+    font-size: 3rem;
+  }
+  
+  .parte-info h3 {
+    font-size: 2.5rem;
+  }
+  
+  .info-parrafo {
+    width: 80%;
+  }
+  
+  .info-parrafo p {
+    font-size: 1rem;
+  }
+  
+  .ss-boton {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+  }
+
+  .ts-parte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tercer-seccion h2 {
+    font-size: 3rem;
+  }
+  
+  .nombre-video-1,
+  .nombre-video-2,
+  .nombre-video-3 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nombre-video-1 h5,
+  .nombre-video-2 h5,
+  .nombre-video-3 h5 {
+    font-family: var(--textos);
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+  .nombre-video-1 h3,
+  .nombre-video-2 h3,
+  .nombre-video-3 h3 {
+    font-family: var(--textos);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .video1 iframe,
+  .video2 iframe,
+  .video3 iframe {
+    width: 280px;
+    height: 150px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 2rem;
+  }
+  
+  .footer-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-redes,
+  .menu-redes {
+    gap: 1.5rem;
+  }
+  
+  .footer-redes i,
+  .menu-redes i {
+    font-size: 1rem;
+  }
+
 }
