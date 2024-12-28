@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Luis Jalan</title>
+  <link rel="shortcut icon" href="./img/icon-lj.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <header>
+
+    <section class="header">
+      <div class="lj-logo">
+        <a href="index.html"><h3>LUIS   JALAN</h3></a>
+      </div>
+      <section class="menu">
+        <button class="open-menu" id="open-menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <nav class="nav">
+          <button class="close-menu" id="close-menu">
+            <i class="bi bi-x"></i>
+          </button>
+          <div class="menu-info">
+            <div class="lj-logo-menu">
+              <a href="index.html"><h3>LUIS   JALAN</h3></a>
+            </div>
+            <ul class="menu-nav">
+              <a href="./bio.html"><li>Bio</li></a>
+              <a href="./musica.html"><li>Música</li></a>
+              <a href="./presentaciones.html"><li>Presentaciones</li></a>
+              <a href="./contacto.html"><li>Contacto</li></a>
+            </ul>
+            <div class="menu-redes">
+              <a href="#" target="_blank"><i class="bi bi-instagram footer-icon"></i></a>
+              <a href="#" target="_blank"><i class="bi bi-facebook footer-icon"></i></a>
+              <a href="#" target="_blank"><i class="bi bi-spotify footer-icon"></i></a>
+              <a href="#" target="_blank"><i class="bi bi-youtube footer-icon"></i></a>
+            </div>
+          </div>
+          
+        </nav>
+      </section>
+    </section>
+
+    <figure class="hero-contacto-pc">
+    </figure>
+
+    <figure class="hero-contacto-mobile">
+    </figure>
+
+  </header>
+
+  <main class="contacto-main">
+
+    <section class="contacto-titulo">
+      <h3>Conéctate con</h3>
+      <h2>Luis Jalan</h2>
+    </section>
+
+    <section class="contacto-info">
+      <section class="contactos-texto">
+        <p>Hey, negro, aquí no hay máscaras ni poses. Esto es real, esto es Pura Calle, y queremos conectar contigo. Si sientes la vibra de nuestra música, si te inspiran las historias que contamos, o si simplemente quieres hablar de pura calle, este es el lugar. </p> <br>
+        <p>Esto no es solo música; es familia, es barrio, es energía. Queremos que te sumes a este movimiento, porque cada mensaje que recibimos nos impulsa a seguir rompiendo. Escríbenos, comparte tus ideas o solo pásate a decirnos qué significa para ti ser parte de esta locura. </p> <br>
+        <p><strong>La calle no se camina solo. Hagamos ruido juntos.</strong></p>
+      </section>
+  
+      <section class="contactos-datos">
+        <a href=""><i class="bi bi-envelope-at-fill"></i>Luisjalanbro@gmail.com</a>
+        <a href=""><i class="bi bi-whatsapp"></i>314 665 0358</a>
+        <a href=""><i class="bi bi-geo-alt-fill"></i>Buga, Valle del Cauca, Colombia</a>
+      </section>
+
+    </section>
+
+    <section class="contacto-abajo">
+
+      <section class="contacto-foto">
+      </section>
+  
+      <section class="contacto-formulario">
+        <h4>¿Quieres enviarme un mensaje?</h4>
+  
+        <form id="contacto-campos" action="https://formspree.io/f/meookond" method="POST">
+            <label for="nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="contacto_nombre">
+            </label>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Email" required class="contacto_email">
+            </label>
+            <select name="tema" id="tema" required class="contacto_selector">
+                <option disabled selected value="">¿De qué quieres hablarme?</option>
+                <option value="Presentación privada">Presentación privada</option>
+                <option value="Concierto">Concierto</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <textarea name="mensaje" placeholder="Escribe algo..." id="mensaje" class="contacto-textarea" required></textarea>
+            <button type="submit" class="contacto_boton">Enviar</button>
+        </form>
+        
+        <div id="mensaje-resultado" style="margin-top: 20px; display: none;"></div>
+  
+      </section>
+
+    </section>
+
+
+  </main>
+
+
+  <footer>
+
+    <section class="footer">
+
+      <div class="footer-logo">
+        <a href="index.html"><h3>LUIS   JALAN</h3></a>
+      </div>
+      <ul class="footer-menu">
+        <a href="./bio.html"><li>Bio</li></a>
+        <a href="./musica.html"><li>Música</li></a>
+        <a href="./presentaciones.html"><li>Presentaciones</li></a>
+        <a href="./contacto.html"><li>Contacto</li></a>
+      </ul>
+      <div class="footer-redes">
+        <a href="#" target="_blank"><i class="bi bi-instagram footer-icon"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-facebook footer-icon"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-spotify footer-icon"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-youtube footer-icon"></i></a>
+      </div>
+
+    </section>
+
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

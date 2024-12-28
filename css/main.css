@@ -24,6 +24,10 @@ li {
   list-style-type: none;
 }
 
+main {
+  background-color: rgb(14, 14, 14);
+}
+
 /******************/
 /***** HEADER *****/
 /******************/
@@ -164,6 +168,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .ps-parte1,
@@ -406,6 +411,293 @@ li {
 }
 
 
+/*****************/
+/****** BIO ******/
+/*****************/
+
+.hero-bio-pc {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/hero-pc-bkgg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation:bg-pan-tr 5s both
+}
+
+@keyframes bg-pan-tr{0%{background-position:0 100%}100%{background-position:100% 0}}
+
+.hero-bio-mobile {
+  display: none;
+}
+
+.bio-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 3rem 4rem;
+  background-color: rgb(14, 14, 14);
+  color: white;
+}
+
+.bio-info h2 {
+  font-family: var(--textos);
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgb(247, 196, 86);
+  text-transform: uppercase;
+}
+
+.bio-info h3 {
+  font-family: var(--titulos);
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(247, 196, 86);
+  margin-bottom: 2rem;
+}
+
+.bio-info p {
+  font-family: var(--textos);
+  font-size: 1.2rem;
+}
+
+.bio-fotos {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 14, 14);
+  padding-bottom: 3rem;
+}
+
+.bio-foto {
+  width: 30%;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .3s ease-in-out;
+}
+
+.bio-foto-1{
+  background-image: url("../img/bio-foto-1.jpeg");
+}
+
+.bio-foto-2{
+  background-image: url("../img/bio-foto-2.jpeg");
+}
+
+.bio-foto-3{
+  background-image: url("../img/bio-foto-3.jpeg");
+}
+
+.bio-fotos:hover .bio-foto {
+  filter: grayscale(1);
+}
+
+.bio-fotos .bio-foto:hover {
+  filter: grayscale(0);
+}
+
+
+/**********************/
+/****** CONTACTO ******/
+/**********************/
+
+.hero-contacto-pc {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/contacto-pc-bkg.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px); 
+  animation: clearBlur 1.5s ease-in-out forwards;
+}
+
+@keyframes clearBlur {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.hero-contacto-mobile {
+  display: none;
+}
+
+.contacto-main {
+  width: 100%;
+  padding: 3rem 4rem;
+}
+
+.contacto-titulo h3{
+  font-family: var(--textos);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.contacto-titulo h2 {
+  font-family: var(--titulos);
+  font-size: 4rem;
+  font-weight: 500;
+  color: rgb(247, 196, 86);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 15px;
+}
+
+.contacto-info {
+  display:flex;
+  flex-direction: row;
+  gap: 3rem;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.contactos-texto {
+  flex: 1;
+  color: white;
+  font-family: var(--textos);
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.contactos-datos {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem;
+  font-family: var(--textos);
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.contactos-datos a {
+  color: white;
+}
+
+.contactos-datos i {
+  color:rgb(247, 196, 86);
+  margin-right: .5rem;
+}
+
+.contacto-abajo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 4rem;
+}
+
+.contacto-foto {
+  flex: 1;
+  height: auto;
+  background-image: url("../img/contacto-bkg-abajo.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .3s ease-in-out;
+}
+
+.contacto-formulario {
+  flex: 1;
+  height: 70dvh;
+  height: 70vh;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contacto-formulario h4 {
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: var(--textos);
+}
+
+.contacto-formulario form {
+  width: 80%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto_nombre {
+  width: 100%;
+  padding: .5rem;
+}
+
+.contacto_email {
+  width: 100%;
+  padding: .5rem;
+}
+
+.contacto_selector {
+  width: 100%;
+  padding: .5rem;
+}
+
+.form-control {
+  padding: 10px;
+}
+
+.contacto_boton {
+  width: 30%;
+  padding: 7px;
+  align-self: center;
+  background-color: rgb(133, 0, 33);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.contacto-textarea {
+  width: 100%;
+  padding: .8rem;
+  height: 120px;
+  font-family: var(--textos);
+}
+
+.contacto_boton:hover {
+  background-color: rgb(206, 25, 70);
+}
+
+#mensaje-resultado {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.mensaje-exito {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+
 /***************************/
 /****** MEDIA QUERIES ******/
 /***************************/
@@ -465,7 +757,40 @@ li {
     font-size: 1rem;
     padding: 1rem 3rem;
   }
+
+  .bio-info h2 {
+    font-family: var(--textos);
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgb(247, 196, 86);
+    text-transform: uppercase;
+  }
   
+  .bio-fotos {
+    gap: 2rem;
+  }
+  
+  .bio-foto {
+    width: 25%;
+    height: 600px;
+  }
+  
+  .contacto-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .contacto-foto {
+    flex: 1;
+    height: auto;
+    background-image: url("../img/contacto-bkg-abajo.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+  }
+
 }
 
 @media screen and (max-width: 760px) {
@@ -487,6 +812,7 @@ li {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
+    background-color: white;
   }
   
   .ps-parte1-mobile,
@@ -516,7 +842,43 @@ li {
     background-size: contain;
   }
 
+  .contacto-main {
+    padding: 3rem 2rem;
+  }
+
+  .contacto-abajo {
+    gap: 2rem;
+  }
+  
+  .contacto-formulario {
+    width: 100%;
+  } 
+  
+  .contacto-formulario form {
+    width: 100%;
+  }
+  
+  .contacto_nombre {
+    width: 100%;
+    padding: .5rem;
+  }
+  
+  .contacto_email {
+    width: 100%;
+    padding: .5rem;
+  }
+  
+  .contacto_selector {
+    width: 100%;
+    padding: .5rem;
+  }
+  
+  .contacto_boton {
+    width: 50%;
+  }
+
 }
+
 
 @media screen and (max-width: 630px) {
 
@@ -526,6 +888,32 @@ li {
     width: 400px;
     height: 190px;
   }
+  
+  .contacto-abajo {
+    flex-direction: column-reverse;
+    padding-top: 3rem;
+    height: auto;
+  }
+  
+  .contacto-foto {
+    width: 100%;
+    padding: 50%;
+    background-image: url("../img/contacto-bkg-abajo.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+  }
+  
+  .contacto-formulario form {
+    width: 80%;
+  }
+
+  .contacto_boton {
+    width: 50%;
+    padding: 10px;
+  }
+  
 }
 
 
@@ -654,4 +1042,110 @@ li {
     font-size: 1rem;
   }
 
+  .hero-bio-pc {
+    display: none;
+  }
+  
+  .hero-bio-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/hero-mobile-bkg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation:bg-pan-tr 5s both
+  }
+
+   @keyframes bg-pan-tr{0%{background-position:0 100%}100%{background-position:100% 0}}
+  
+  .bio-info {
+    padding: 3rem;
+  }
+  
+  .bio-info h2 {
+    font-size: 2.3rem;
+  }
+  
+  .bio-info h3 {
+    font-size: 2.3rem;
+  }
+  
+  .bio-info p {
+    font-size: 1rem;
+  }
+
+  .bio-fotos {
+    flex-direction: column;
+  }
+  
+  .bio-foto {
+    width: 80%;
+    height: 280px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+  }
+
+  .hero-contacto-pc {
+    display: none;
+  }
+  
+  .hero-contacto-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/contacto-mobile-bkg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px); 
+    animation: clearBlur 1.5s ease-in-out forwards;
+  }
+
+  @keyframes clearBlur {
+    0% {
+      filter: blur(10px);
+    }
+    100% {
+      filter: blur(0px);
+    }
+  }
+
+  
+  .contacto-titulo h3{
+    font-size: 2rem;
+  }
+  
+  .contacto-titulo h2 {
+    font-size: 2.5rem;
+  }
+
+  .contacto-info {
+    width: 100%;
+  }
+  
+  .contactos-texto {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .contactos-datos {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  .contacto-formulario {
+    padding: 0;
+  }
+  
+  .contacto-formulario h4 {
+    font-size: 1.4rem;
+  }
+  
+  .contacto-formulario form {
+    width: 90%;
+  }
+  
 }
