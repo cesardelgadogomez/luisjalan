@@ -503,6 +503,90 @@ main {
 }
 
 
+/********************/
+/****** MÚSICA ******/
+/********************/
+
+.hero-musica-pc {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/hero-musica-pc.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation:bg-pan-tr 5s both
+}
+
+@keyframes bg-pan-tr{0%{background-position:0 100%}100%{background-position:100% 0}}
+
+.hero-musica-mobile {
+  display: none;
+}
+
+.musica-info h2 {
+  font-family: var(--textos);
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgb(247, 196, 86);
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.musica-tracks {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-princial {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.virgen {
+  width: 50%;
+  height: 356px;
+}
+
+.otros-tracks {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.track {
+  height: 200px;
+}
+
+.musica-boton button{
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.musica-boton a button:hover {
+  background-color: rgb(175, 6, 6);
+  color: white;
+}
+
+.musica-boton a button i{
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
 /**********************/
 /****** CONTACTO ******/
 /**********************/
@@ -842,6 +926,25 @@ main {
     background-size: contain;
   }
 
+  .musica-tracks {
+    padding: 2rem 1rem;
+  }
+  
+  .virgen {
+    width: 70%;
+    height: 356px;
+  }
+  
+  .otros-tracks {
+    padding: 2rem 0;
+    gap: 1rem;
+  }
+  
+  .track {
+    width: 40%;
+    height: 200px;
+  }
+
   .contacto-main {
     padding: 3rem 2rem;
   }
@@ -887,6 +990,11 @@ main {
   .video3 iframe {
     width: 400px;
     height: 190px;
+  }
+  
+  .track {
+    width: 70%;
+    height: 200px;
   }
   
   .contacto-abajo {
@@ -1019,6 +1127,49 @@ main {
   .video3 iframe {
     width: 280px;
     height: 150px;
+  }
+
+  .hero-musica-pc {
+    display: none;
+  }
+
+  .hero-musica-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/hero-musica-mobile.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation:bg-pan-tr 5s both
+  }
+
+  @keyframes bg-pan-tr{0%{background-position:0 100%}100%{background-position:100% 0}}
+
+  .musica-info h2 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .musica-tracks {
+    padding: 2rem .5rem;
+  }
+
+  .track-princial {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .virgen {
+    width: 80%;
+  }
+
+  .track {
+    width: 80%;
+    height: 200px;
   }
   
   .footer-logo h3 {
