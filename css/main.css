@@ -324,17 +324,20 @@ main {
 
 .nombre-video-1,
 .nombre-video-3 {
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.nombre-video-2,
+.nombre-video-4 {
   text-align: right;
   margin-right: 3rem;
 }
 
-.nombre-video-2 {
-  margin-left: 3rem;
-}
-
 .nombre-video-1 h5,
 .nombre-video-2 h5,
-.nombre-video-3 h5 {
+.nombre-video-3 h5,
+.nombre-video-4 h5 {
   font-family: var(--textos);
   font-weight: 300;
   font-size: 2rem;
@@ -342,7 +345,8 @@ main {
 
 .nombre-video-1 h3,
 .nombre-video-2 h3,
-.nombre-video-3 h3 {
+.nombre-video-3 h3,
+.nombre-video-4 h3 {
   font-family: var(--textos);
   font-weight: 700;
   font-size: 3rem;
@@ -350,7 +354,8 @@ main {
 
 .video1 iframe,
 .video2 iframe,
-.video3 iframe {
+.video3 iframe,
+.video4 iframe {
   width: 560px;
   height: 315px;
 }
@@ -544,7 +549,70 @@ main {
   justify-content: center;
 }
 
-.track-princial {
+.track-principal {
+  width: 50%;
+}
+
+#main-track-button {
+  visibility: hidden;
+  opacity: 0;
+  margin: 10px auto;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: rgb(143, 6, 6);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease, background-color .3s ease-in-out;
+}
+
+#main-track-button.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#main-track-button.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+#main-track-button:hover {
+  background-color: #ac0202;
+  color: white;
+  font-weight: 700;
+}
+
+.otros-tracks {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.track-selector {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a10606;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.track-selector:hover {
+  background-color: #740202;
+}
+
+
+/* .track-princial {
   width: 100%;
   height: 400px;
   display: flex;
@@ -555,6 +623,7 @@ main {
 .virgen {
   width: 50%;
   height: 356px;
+  border-radius: 12px;
 }
 
 .otros-tracks {
@@ -567,7 +636,8 @@ main {
 
 .track {
   height: 200px;
-}
+  border-radius: 12px;
+} */
 
 .musica-boton button{
   padding: 1rem 3rem;
@@ -589,6 +659,8 @@ main {
   font-size: 1.1rem;
   margin-right: 5px;
 }
+
+
 
 /**********************/
 /****** CONTACTO ******/
@@ -799,14 +871,16 @@ main {
     align-items: center;
   }
 
-  .ts-parte2 {
+  .ts-parte1,
+  .ts-parte3 {
     display: flex;
     flex-direction: column-reverse;
   }
   
   .nombre-video-1,
   .nombre-video-2,
-  .nombre-video-3 {
+  .nombre-video-3,
+  .nombre-video-4 {
     text-align: center;
     width: 100%;
     margin: 0;
@@ -890,20 +964,9 @@ main {
   .musica-tracks {
     padding: 2rem 1rem;
   }
-  
-  .virgen {
+
+  .track-principal {
     width: 70%;
-    height: 356px;
-  }
-  
-  .otros-tracks {
-    padding: 2rem 0;
-    gap: 1rem;
-  }
-  
-  .track {
-    width: 40%;
-    height: 200px;
   }
 
   .contacto-main {
@@ -948,14 +1011,14 @@ main {
 
   .video1 iframe,
   .video2 iframe,
-  .video3 iframe {
+  .video3 iframe,
+  .video4 iframe {
     width: 400px;
     height: 190px;
   }
-  
-  .track {
-    width: 70%;
-    height: 200px;
+
+  .otros-tracks {
+    flex-wrap: wrap;
   }
   
   .contacto-abajo {
@@ -1058,7 +1121,8 @@ main {
   
   .nombre-video-1 h5,
   .nombre-video-2 h5,
-  .nombre-video-3 h5 {
+  .nombre-video-3 h5,
+  .nombre-video-4 h5 {
     font-family: var(--textos);
     font-weight: 300;
     font-size: 1rem;
@@ -1066,7 +1130,8 @@ main {
   
   .nombre-video-1 h3,
   .nombre-video-2 h3,
-  .nombre-video-3 h3 {
+  .nombre-video-3 h3,
+  .nombre-video-4 h3 {
     font-family: var(--textos);
     font-weight: 700;
     font-size: 1.5rem;
@@ -1074,7 +1139,8 @@ main {
   
   .video1 iframe,
   .video2 iframe,
-  .video3 iframe {
+  .video3 iframe,
+  .video4 iframe {
     width: 280px;
     height: 150px;
   }
@@ -1102,24 +1168,11 @@ main {
   }
 
   .musica-tracks {
-    padding: 2rem .5rem;
+    padding: 1rem .5rem 2rem .5rem;
   }
 
-  .track-princial {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .virgen {
+  .track-principal {
     width: 80%;
-  }
-
-  .track {
-    width: 80%;
-    height: 200px;
   }
   
   .footer-logo h3 {
