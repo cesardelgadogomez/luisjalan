@@ -109,7 +109,7 @@ main {
 
 .menu-nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin-bottom: 3rem;
 }
@@ -416,6 +416,14 @@ main {
 .menu-redes i:hover {
   background-color: rgb(247, 196, 86);
   color: white;
+}
+
+.footer-derechos {
+  margin-top: 2rem;
+  font-family: var(--textos);
+  color: rgb(92, 91, 91);
+  font-size: .8rem;
+  text-align: center;
 }
 
 
@@ -1048,6 +1056,20 @@ main {
   
 }
 
+@media screen and (max-width:580px) {
+
+  .menu-nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .menu-nav li {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+}
+
 
 @media screen and (max-width:450px) {
 
@@ -1061,7 +1083,7 @@ main {
     font-size: 3rem;
     letter-spacing: 4px;
     color: rgb(247, 196, 86);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   
   .menu-nav {
@@ -1069,11 +1091,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .menu-nav li {
-    font-size: 1.4rem;
-    text-align: center;
+    margin-bottom: 0;
   }
   
   .video-pc {
