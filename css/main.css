@@ -701,7 +701,8 @@ main {
   margin-bottom: 2rem;
 }
 
-.equipo-info h3 {
+.equipo-info h3,
+.equipo-titulo {
   font-family: var(--textos);
   font-size: 3rem;
   font-weight: 500;
@@ -709,11 +710,104 @@ main {
   text-align: center;
 }
 
+.equipo-titulo {
+  font-weight: 700;
+}
+
 .equipo-info p {
   font-family: var(--textos);
   font-size: 1.2rem;
 }
 
+.equipo-imagenes {
+  width: 75%;
+  display: flex;
+  justify-self: center;
+  padding: 0 0 2rem 0;
+}
+
+.imagenes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 2rem;
+  height: 500px;
+  transition: 0.5s;
+}
+
+.box {
+  background: var(--image);
+  background-position: center;
+  background-size: cover;
+  transition: .5s;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.box span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition: 0.5s;
+}
+
+.box:hover span {
+  opacity: 1;
+}
+
+.box span h3 {
+  font-family: var(--textos);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.box span p {
+  font-family: var(--textos);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.imagenes-container:hover .box  {
+  filter: grayscale(1);
+}
+
+.imagenes-container .box:hover {
+  filter: grayscale(0);
+}
+
+.imagenes-container:has(.one:hover) {
+  grid-template-columns: 1fr .5fr .5fr .5fr .5fr;
+}
+
+.imagenes-container:has(.two:hover) {
+  grid-template-columns: .5fr 1fr .5fr .5fr .5fr;
+}
+
+.imagenes-container:has(.three:hover) {
+  grid-template-columns: .5fr .5fr 1fr .5fr .5fr;
+}
+
+.imagenes-container:has(.four:hover) {
+  grid-template-columns: .5fr .5fr .5fr 1fr .5fr;
+}
+
+.imagenes-container:has(.five:hover) {
+  grid-template-columns: .5fr .5fr .5fr .5fr 1fr;
+}
 
 
 /**********************/
@@ -940,6 +1034,10 @@ main {
     margin: 0;
   }
 
+  .equipo-imagenes {
+    width: 90%;
+  }
+
 }
 
 
@@ -1021,6 +1119,46 @@ main {
 
   .track-principal {
     width: 70%;
+  }
+
+  .equipo-imagenes {
+    width: 80%;
+  }
+
+  .imagenes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    padding: 2rem;
+    height: 1500px;
+    transition: 0.5s;
+  }
+  
+  .imagenes-container:has(.one:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr .5fr;
+  }
+  
+  .imagenes-container:has(.two:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr .5fr .5fr .5fr;
+  }
+  
+  .imagenes-container:has(.three:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr 1fr .5fr .5fr;
+  }
+  
+  .imagenes-container:has(.four:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr 1fr .5fr;
+  }
+  
+  .imagenes-container:has(.five:hover) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr 1fr;
   }
 
   .contacto-main {
@@ -1237,6 +1375,10 @@ main {
 
   .track-principal {
     width: 80%;
+  }
+
+  .equipo-imagenes {
+    width: 90%;
   }
   
   .footer-logo h3 {
